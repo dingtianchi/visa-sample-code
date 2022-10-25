@@ -1,0 +1,24 @@
+---
+spring:
+  main:
+    web-application-type: none
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 30000
+        readTimeout: 30000
+        loggerLevel: full
+  httpclient:
+    disableSslValidation: true
+
+client:
+  visa:
+    baseUrl: "https://sandbox.api.visa.com/"
+    apiKey: "V3YVCJ7OSPAOPEDT6T8G21SFnnaTswx3ZyBmNPiLptT4TMcKo"
+    sharedSecret: "l0smvvCfK0/GzAmrSPppWppYOV9a#B66999nMCoE"
+    resourcePaths:
+      planAcceptancesApi: "installments/v2/planAcceptances/search"
+
+
